@@ -28,7 +28,7 @@
     <!-- Navbar Section -->
     <!-- Navbar Section -->
     <nav
-      style="background-color: #ffffff0c"
+      style="background-color: rgba(255, 255, 255, 0.2)"
       class="navbar navbar-expand-lg fixed-top"
     >
       <div class="container">
@@ -115,7 +115,13 @@
 
     <!-- Home Section -->
     <section id="home">
-      <img src="/img/isc500.png" alt="Informatics Study Club Logo" />
+      <div class="image-container">
+        <img
+          src="/img/isc500.png"
+          alt="Informatics Study Club Logo"
+          class="image-3d"
+        />
+      </div>
       <h1>Informatics Study Club</h1>
       <p>
         Bergabunglah dengan komunitas teknologi terbaik! Kami menyediakan wadah
@@ -129,11 +135,6 @@
         class="btn btn-primary"
         >JOIN NOW</a
       >
-
-      <!-- Scroll Down Icon -->
-      <a href="#aboutus" class="scroll-down">
-        <i class="fas fa-chevron-down"></i>
-      </a>
     </section>
 
     <!-- About Section -->
@@ -208,6 +209,24 @@
           const target = document.querySelector(this.getAttribute('href'));
           target.scrollIntoView({ behavior: 'smooth' });
         });
+      });
+    </script>
+
+    <!-- image 3D -->
+    <script>
+      const image = document.querySelector('.image-3d');
+
+      image.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = image.getBoundingClientRect();
+        const x = (e.clientX - left - width / 2) / 5;
+        const y = (e.clientY - top - height / 2) / 5;
+
+        image.style.transform = `rotateX(${-y}deg) rotateY(${x}deg) scale(1.05)`;
+      });
+
+      image.addEventListener('mouseleave', () => {
+        image.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+        image.style.boxShadow = 'none';
       });
     </script>
 
