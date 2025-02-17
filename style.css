@@ -40,6 +40,18 @@ section {
   margin-top: 10px;
   color: #ddd;
 }
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px; /* Lebih dalam */
+}
+
+.image-3d {
+  width: 250px;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  transform-style: preserve-3d;
+}
 
 /* untuk Section */
 #home {
@@ -61,32 +73,8 @@ section {
   background-color: #f4f4f4;
   color: #333;
 }
-/* untuk tombol scroll */
-.scroll-down,
-.scroll-up {
-  position: absolute;
-  font-size: 30px;
-  color: white;
-  text-decoration: none;
-  animation: bounce 1.5s infinite;
-}
 
-.scroll-down {
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll-up {
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll-down:hover,
-.scroll-up:hover {
-  color: #cccccc;
-}
+/* navbar */
 .navbar-nav .nav-link:hover,
 .btn:hover,
 .division-card:hover {
@@ -94,6 +82,7 @@ section {
   transition: opacity 0.3s ease-in-out;
 }
 
+/* card */
 .glass-card {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
@@ -105,15 +94,6 @@ section {
   text-align: center;
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(10px);
-  }
-}
 /* particle js */
 #particles-js {
   position: fixed;
