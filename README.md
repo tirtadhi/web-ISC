@@ -13,7 +13,6 @@ Informatics Study Club (ISC) Website adalah platform digital untuk komunitas mah
 ## Teknologi yang Digunakan 🛠️
 - **HTML5** & **CSS3** (Bootstrap 5 untuk responsivitas)
 - **JavaScript** (interaksi dan animasi)
-- **FontAwesome** (ikon navigasi)
 - **Particles.js** (efek background interaktif)
 
 ## Cara Menjalankan 🚀
